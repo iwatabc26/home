@@ -19,6 +19,13 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://iwatabc26.github.io/home/">
 
+  <!-- robots -->
+  {% if site.env == "production" %}
+  <meta name="robots" content="index, follow">
+  {% else %}
+  <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+
   <link rel="icon" href="{{ site.baseurl }}/images/favicon.png" type="image/png">
   <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
 </head>
