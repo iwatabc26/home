@@ -1,7 +1,7 @@
 title: 磐田ベースボールクラブ
 description: 公式サイト
-url: https://moutineigo.github.io
-baseurl: /baseball
+url: "https://iwatabc26.github.io"
+baseurl: "/home"
 
 timezone: Asia/Tokyo
 lang: ja
