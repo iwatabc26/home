@@ -289,3 +289,15 @@ a {
   margin: 0 auto;
   padding: 24px 16px;
 }
+
+.closed {
+  color: #999;
+}
+
+.closed .strike {
+  text-decoration: line-through;
+}
+
+.closed-text {
+  font-weight: normal;
+}
