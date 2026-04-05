@@ -280,7 +280,7 @@ a {
 
 @media (max-width: 768px) {
   iframe {
-    height: 1100px; /* スマホは縦が長い */
+    height: 1100px;
   }
 }
 
@@ -302,7 +302,6 @@ a {
   font-weight: normal;
 }
 
-/* 記事内の画像は必ず本文幅に収める */
 .post-body img{
   display: block;
   width: 100%;
@@ -310,7 +309,73 @@ a {
   height: auto;
 }
 
-/* 念のため：横はみ出しが起きても “切らずに” スクロールできるようにする */
 .post-body{
   overflow-x: auto;
+}
+
+
+
+/* 協賛企業 */
+.sponsors-section {
+  padding-top: 20px;
+}
+
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  align-items: center;
+}
+
+.sponsor-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 140px;
+  padding: 16px;
+
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+
+  text-align: center;
+}
+
+
+.sponsor-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.sponsor-card img {
+  max-height: 50px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .sponsors-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .sponsor-card {
+    min-height: 96px;
+    padding: 12px;
+  }
+
+  .sponsor-card img {
+    max-height: 56px;
+  }
+}
+
+.sponsor-name {
+  font-size: 13px;
+  color: #444;
+  line-height: 1.4;
 }
